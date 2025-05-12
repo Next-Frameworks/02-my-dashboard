@@ -1,5 +1,8 @@
 
 // prc -> snippet
+
+// Lugar para creatividad
+// https://www.creative-tim.com/twcomponents/component/dashboard-navigation
 export default function CounterPage() {
   return (
     <div>
