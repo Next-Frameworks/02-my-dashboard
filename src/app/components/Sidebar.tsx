@@ -53,7 +53,7 @@ export const Sidebar = () => {
 
         {
           menuItems.map(item => (
-            <SidebarMenuItem 
+            <SidebarMenuItem
               key={ item.path }
               {...item} />
           ))
