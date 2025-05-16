@@ -1,4 +1,5 @@
 import { PokemonGrid, PokemonsReponse, SimplePokemon } from '@/app/pokemons';
+import { notFound } from 'next/navigation';
 
 const getPokemons = async (limit = 20, offset = 0): Promise<SimplePokemon[]> => {
   const data: PokemonsReponse = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
@@ -8,6 +9,9 @@ const getPokemons = async (limit = 20, offset = 0): Promise<SimplePokemon[]> => 
     id: pokemon.url.split('/').at(-2)!, // cortamos:  "https://pokeapi.co/api/v2/pokemon/1/"
     name: pokemon.name 
   }));
+
+  // throw new Error('Esto es un error que no deberia suceder');
+  //throw notFound();
 
   return pokemons;
 }
