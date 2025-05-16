@@ -43,11 +43,12 @@ export const Sidebar = () => {
         <a href="#" className="inline-flex space-x-2 items-center">
           <span>
             <Image 
-            className="rounded-full w-8 h-8" 
-            src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c" 
-            alt="User avatar"
-            width={50}
-            height={50} />
+              className="rounded-full w-8 h-8" 
+              src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c" 
+              alt="User avatar"
+              width={50}
+              height={50}
+              priority={ true } />
           </span>
           <span className="text-sm md:text-base font-bold">
             Angel Developer
