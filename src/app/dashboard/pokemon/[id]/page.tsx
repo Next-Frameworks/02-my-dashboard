@@ -20,7 +20,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       title: `#${ id } - ${ name }`,
       description: `Página del pokémon ${ name }`,
     }
-  } catch (error) {
+  } catch {
     return {
       title: `Página del pokémon`,
       description: `Descripción del pokémon}`,
@@ -42,7 +42,7 @@ const getPokemon = async (id: string): Promise<Pokemon> => {
     console.log('Se cargo:', pokemon.name);
 
     return pokemon;
-  } catch (error) {
+  } catch {
     notFound();
   }
 
@@ -142,8 +142,6 @@ export default async function PokemonPage({ params }: Props) {
 
             </div>
           </div>
-
-
 
         </div>
       </div>

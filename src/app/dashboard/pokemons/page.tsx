@@ -1,4 +1,4 @@
-import { notFound } from 'next/navigation';
+// import { notFound } from 'next/navigation';
 import { PokemonGrid, PokemonsReponse, SimplePokemon } from '@/pokemons';
 
 const getPokemons = async (limit = 20, offset = 0): Promise<SimplePokemon[]> => {
