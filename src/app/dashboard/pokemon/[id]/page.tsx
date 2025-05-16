@@ -22,6 +22,9 @@ const getPokemon = async (id: string): Promise<Pokemon> => {
 
   const pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${ id }`, {
     cache: 'force-cache'
+    // next: {
+    //   revalidate: 60 * 60 * 30 * 6 // cada 6 meses se revalida
+    // }
   }).then(resp => resp.json());
 
   console.log('Se cargo:', pokemon.name);
